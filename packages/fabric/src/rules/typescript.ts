@@ -2,10 +2,6 @@
  * 🚀 https://github.com/typescript-eslint/typescript-eslint
  */
 module.exports = {
-  '@typescript-eslint/no-use-before-define': [
-    'error',
-    { functions: false, classes: true, variables: true, typedefs: true },
-  ],
   '@typescript-eslint/explicit-function-return-type': [
     'off',
     { allowTypedFunctionExpressions: true },

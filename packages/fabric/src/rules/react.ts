@@ -13,7 +13,6 @@ module.exports = {
   'react/destructuring-assignment': 'off',
   'react/jsx-filename-extension': 'off',
   'react/no-array-index-key': 'warn',
-  'react-hooks/rules-of-hooks': 'error',
   'react/require-default-props': 0,
   'react/jsx-fragments': 0,
 }
