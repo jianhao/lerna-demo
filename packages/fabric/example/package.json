@@ -4,10 +4,10 @@
     "start": "umi dev",
     "build": "umi build",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "lint": "yarn lint:js & yarn lint:style",
-    "lint:js": "eslint --ext .js,.ts,jsx,tsx ./src",
+    "lint": "yarn lint:js && yarn lint:style",
+    "lint:js": "eslint --ext .js,.ts,jsx,tsx --format=pretty ./src",
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
-    "lint:fix": "eslint --fix --ext .js,.ts,jsx,tsx ./src & stylelint --fix \"src/**/*.less\" --syntax less"
+    "lint:fix": "eslint --fix --ext .js,.ts,jsx,tsx --format=pretty ./src && stylelint --fix \"src/**/*.less\" --syntax less"
   },
   "dependencies": {
     "@umijs/preset-react": "1.x",

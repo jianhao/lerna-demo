@@ -122,9 +122,9 @@ yarn add husky lint-staged -D
   // ...
   "scripts": {
     "lint": "yarn lint:js & yarn lint:style",
-    "lint:js": "eslint --ext .js,.ts,jsx,tsx ./src",
+    "lint:js": "eslint --ext .js,.ts,jsx,tsx --format=pretty ./src",
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
-    "lint:fix": "eslint --fix --ext .js,.ts,jsx,tsx ./src & stylelint --fix \"src/**/*.less\" --syntax less"
+    "lint:fix": "eslint --fix --ext .js,.ts,jsx,tsx --format=pretty ./src & stylelint --fix \"src/**/*.less\" --syntax less"
   },
   "husky": {
     "hooks": {
@@ -134,7 +134,7 @@ yarn add husky lint-staged -D
   "lint-staged": {
     "*.{.js,.ts,jsx,tsx}": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix --format=pretty"
     ],
     "*.less": [
       "stylelint --syntax less --fix"
