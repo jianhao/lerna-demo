@@ -22,10 +22,10 @@
     "start": "yarn --cwd ./example start",
     "build": "rm -rf ./lib && tsc --build tsconfig.json",
     "test": "yarn build && yarn --cwd ./example lint",
-    "release": "yarn build && np --no-cleanup --yolo --any-branch"
+    "release": "yarn build && np --no-cleanup --yolo --any-branch --no-yarn"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
@@ -48,11 +48,11 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-order": "^4.1.0"
+    "stylelint-order": "^4.1.0",
+    "typescript": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^14.0.27",
-    "np": "^6.4.0",
-    "typescript": "^3.9.7"
+    "np": "^6.4.0"
   }
 }
