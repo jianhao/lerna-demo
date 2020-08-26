@@ -1,6 +1,6 @@
 {
   "name": "@mhc/fabric",
-  "version": "0.0.1-alpha.3",
+  "version": "1.0.0",
   "description": "lint config collection",
   "keywords": [
     "eslint",
