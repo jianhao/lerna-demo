@@ -15,4 +15,6 @@ module.exports = {
   ],
   // 顺序的 import
   'import/order': 2,
+  // 优先export default => off
+  'import/prefer-default-export': 0,
 }
