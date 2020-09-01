@@ -198,6 +198,15 @@ insert_final_newline = true
 trim_trailing_whitespace = false
 ```
 
+## 可能存在的问题
+
+为了体验到更多的 Aribnb 的 styles rules，不再使用 `eslint-config-prettier` 规则，因为它禁用了绝大部分的 styles rules 。
+
+然而不使用 `eslint-config-prettier` 会导致部分 eslint 规则与 prettier 规则冲突。如果发现冲突，请联系 @子明 或自行修改 `rules` 文件夹下的规则，并禁用它。
+
+例如 `space-before-function-paren` 。
+
+
 ## ps
 
 机灵一点，所有的配置方式都不是固定的，根据项目灵活调整
