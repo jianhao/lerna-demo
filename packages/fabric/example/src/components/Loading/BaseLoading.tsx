@@ -11,9 +11,7 @@ class BaseLoading {
   constructor() {
     this.isLoading = false
     this.div = document.querySelector('#root') as Element
-    this.LoadingNode = (
-      <span>Icon</span>
-    )
+    this.LoadingNode = <span>Icon</span>
   }
 
   show() {

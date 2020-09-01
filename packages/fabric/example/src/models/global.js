@@ -5,9 +5,7 @@ export default {
       applyOrder: 0,
     },
   },
-  effects: {
-
-  },
+  effects: {},
   reducers: {
     setData(state, { payload }) {
       return {
@@ -21,7 +19,7 @@ export default {
         scrollHeight: {
           ...state.scrollHeight,
           ...payload,
-        }
+        },
       }
     },
   },
