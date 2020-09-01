@@ -7,7 +7,14 @@ module.exports = {
   // 参数括号
   'arrow-parens': [2, "as-needed", { "requireForBlockBody": true }],
   // 方法名与参数的空格
-  'space-before-function-paren': [2, "always"],
+  // 'space-before-function-paren': [2, "always"],
+  // object 换行 https://eslint.org/docs/rules/object-curly-newline
+  'object-curly-newline': ['error', {
+    ObjectExpression: { multiline: true, consistent: true },
+    ObjectPattern: { multiline: true, consistent: true },
+    ImportDeclaration: { multiline: true, consistent: true },
+    ExportDeclaration: { multiline: true, consistent: true },
+  }],
   // 禁止直接使用 prototype => off
   'no-prototype-builtins': 0,
   // 操作符换行 => off
@@ -18,4 +25,10 @@ module.exports = {
   'no-plusplus': 0,
   // 直接使用全局变量 => off
   'no-restricted-globals': 0,
+
+  /**
+   * 为了兼容 prettier 而禁用的规则
+   */
+  'space-before-function-paren': 0,
+  'no-extra-semi': 0,
 }
