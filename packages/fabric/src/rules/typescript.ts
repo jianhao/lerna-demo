@@ -6,10 +6,10 @@ const esRules = require('./es')
  */
 module.exports = {
   // 接口名称首字母 I
-  '@typescript-eslint/interface-name-prefix': [0, {
+  '@typescript-eslint/interface-name-prefix': [2, {
     prefixWithI: 'always'
   }],
-  '@typescript-eslint/member-delimiter-style': [0, {
+  '@typescript-eslint/member-delimiter-style': [2, {
     delimiter: 'none'
   }],
   '@typescript-eslint/no-non-null-assertion': 2,

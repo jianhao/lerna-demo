@@ -10,9 +10,9 @@ module.exports = {
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
-    // 'prettier',
+    'prettier',
     // 'prettier/react',
-    // 'prettier/@typescript-eslint',
+    'prettier/@typescript-eslint',
   ],
   plugins: [
     'prettier',

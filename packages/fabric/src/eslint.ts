@@ -9,7 +9,7 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
-    // 'prettier',
+    'prettier',
     // 'prettier/react',
   ],
   plugins: [
