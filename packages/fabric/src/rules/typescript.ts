@@ -10,7 +10,14 @@ module.exports = {
     prefixWithI: 'always'
   }],
   '@typescript-eslint/member-delimiter-style': [2, {
-    delimiter: 'none'
+    multiline: {
+      delimiter: 'none',
+      requireLast: false
+    },
+    singleline: {
+      delimiter: 'comma',
+      requireLast: true
+    },
   }],
   '@typescript-eslint/no-non-null-assertion': 2,
 
