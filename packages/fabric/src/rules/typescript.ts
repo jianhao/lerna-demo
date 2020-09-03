@@ -5,10 +5,6 @@ const esRules = require('./es')
  * 🚀 https://github.com/iamturns/eslint-config-airbnb-typescript
  */
 module.exports = {
-  // 接口名称首字母 I
-  '@typescript-eslint/interface-name-prefix': [2, {
-    prefixWithI: 'always'
-  }],
   '@typescript-eslint/member-delimiter-style': [2, {
     multiline: {
       delimiter: 'none',
