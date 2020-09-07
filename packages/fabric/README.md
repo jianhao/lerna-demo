@@ -9,7 +9,7 @@ lint + lint + lint = fabric
 
 - [x] eslint 配置
 - [x] stylelint 配置
-- [x] prettier 配置
+- [x] prettier 配置 ❌ 根据团队投票，决定不再使用。所以也不再支持 prettier，配置仍然保留
 - [ ] 部分项目安装依赖冲突，导致下载了旧版本的 eslint-pulgin-xxx , 提供解决方案
 
 ## 使用
@@ -24,7 +24,6 @@ yarn add @mhc/fabric -D
 
 ```
 |- .eslintrc.js
-|- .prettierrc.js
 |- .stylelintrc.js
 |- package.json
 |- tsconfig.eslint.json (如果需要的话)
@@ -32,7 +31,7 @@ yarn add @mhc/fabric -D
 
 ### `.eslintrc.js`
 
-为了方便 js 项目的配置，继承的 eslintrc 文件分成了两个。`eslint` 和 `ts-eslint`。
+为了方便 js 项目的配置，继承的 eslintrc 文件分成了两个。`eslint` 和 `ts-eslint`。分别对应 js 项目和 ts 项目的配置
 
 
 
@@ -61,7 +60,7 @@ module.exports = {
 }
 ```
 
-`parserOptions.project` 配置是必须的，指向你项目中的 `tsconfig.json`, 或者如下，再创建一个 `tsconfig.eslint.json` 。一般更建议再创建一个，他们 include 的内容不同。
+`parserOptions.project` 配置是必须的，指向你项目中的 `tsconfig.json`, 或者如下，再创建一个 `tsconfig.eslint.json` 。一般更建议再创建一个，他们 include 的内容可能不同。
 
 ```json
 // 也可以 "extends": "./tsconfig.json"
@@ -86,16 +85,6 @@ module.exports = {
 
 不过请注意 `parserOptions.createDefaultProgram` 配置，设置为 `true` 将会带来巨大的性能消耗，不推荐开启。（本项目也是为了更流畅的开发体验，不得不让用户手动配置 `parserOptions.project`）
 
-
-### `.prettierrc.js`
-
-```javascript
-const fabric = require('@mhc/fabric');
-
-module.exports = {
-  ...fabric.prettier,
-};
-```
 
 ### `.stylelintrc.js`
 
@@ -133,7 +122,6 @@ yarn add husky lint-staged -D
   },
   "lint-staged": {
     "*.{.js,.ts,jsx,tsx}": [
-      "prettier --write",
       "eslint --fix --format=pretty"
     ],
     "*.less": [
@@ -145,7 +133,7 @@ yarn add husky lint-staged -D
 
 ### 搭配 VSCode 插件食用
 
-安装 `eslint` `stylelint` `prettier`  `EditorConfig for VS Code` 插件
+安装 `eslint` `stylelint` `EditorConfig for VS Code` 插件
 
 
 **vscode `config.json`**
@@ -156,28 +144,6 @@ yarn add husky lint-staged -D
   "source.fixAll.eslint": true,
   "source.fixAll.stylelint": true,
 },
-
-// 进阶，配置文件默认的格式化工具，开始丧心病狂
-"editor.defaultFormatter": "esbenp.prettier-vscode",
-"[javascript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[javascriptreact]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[typescript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[typescriptreact]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[json]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[graphql]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-
 ```
 
 **在项目中加入配置 `.editorconfig`**
@@ -197,15 +163,6 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 ```
-
-## 可能存在的问题
-
-为了体验到更多的 Aribnb 的 styles rules，不再使用 `eslint-config-prettier` 规则，因为它禁用了绝大部分的 styles rules 。
-
-然而不使用 `eslint-config-prettier` 会导致部分 eslint 规则与 prettier 规则冲突。如果发现冲突，请联系 @子明 或自行修改 `rules` 文件夹下的规则，并禁用它。
-
-例如 `space-before-function-paren` 。
-
 
 ## ps
 

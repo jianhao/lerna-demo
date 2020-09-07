@@ -2,19 +2,25 @@
  * 🚀 http://eslint.cn/
  */
 module.exports = {
+  /**
+   * style rules
+   */
   // 封号
-  // 'semi': [2, 'never', { "beforeStatementContinuationChars": "always" }],
+  'semi': [2, 'never'],
   // 参数括号
-  // 'arrow-parens': [2, "as-needed", { "requireForBlockBody": true }],
+  'arrow-parens': [2, "as-needed", { "requireForBlockBody": true }],
   // 方法名与参数的空格
-  // 'space-before-function-paren': [2, "always"],
+  'space-before-function-paren': [2, "always"],
   // object 换行 https://eslint.org/docs/rules/object-curly-newline
-  // 'object-curly-newline': ['error', {
-  //   ObjectExpression: { multiline: true, consistent: true },
-  //   ObjectPattern: { multiline: true, consistent: true },
-  //   ImportDeclaration: { multiline: true, consistent: true },
-  //   ExportDeclaration: { multiline: true, consistent: true },
-  // }],
+  'object-curly-newline': ['error', {
+    ObjectExpression: { multiline: true, consistent: true },
+    ObjectPattern: { multiline: true, consistent: true },
+    ImportDeclaration: { multiline: true, consistent: true },
+    ExportDeclaration: { multiline: true, consistent: true },
+  }],
+  /**
+   * other rules
+   */
   // 禁止直接使用 prototype => off
   'no-prototype-builtins': 0,
   // 操作符换行 => off

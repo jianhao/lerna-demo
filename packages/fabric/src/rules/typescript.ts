@@ -12,8 +12,14 @@ module.exports = {
     },
     singleline: {
       delimiter: 'semi',
-      requireLast: true
+      requireLast: false
     },
   }],
   '@typescript-eslint/no-non-null-assertion': 2,
+
+  // 基于 es
+  'semi': 0,
+  '@typescript-eslint/semi': esRules.semi,
+  'space-before-function-paren': 0,
+  '@typescript-eslint/space-before-function-paren': esRules['space-before-function-paren'],
 }

@@ -5,7 +5,7 @@ class ClassComp extends React.Component {
     number: 0,
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setNumber()
   }
 
@@ -15,7 +15,7 @@ class ClassComp extends React.Component {
     })
   }
 
-  render() {
+  render () {
     const { number } = this.state
 
     return (
@@ -27,7 +27,7 @@ class ClassComp extends React.Component {
   }
 }
 
-;(() => {
+(() => {
   console.log(111)
 })()
 

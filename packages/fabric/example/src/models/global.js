@@ -7,13 +7,13 @@ export default {
   },
   effects: {},
   reducers: {
-    setData(state, { payload }) {
+    setData (state, { payload }) {
       return {
         ...state,
         ...payload,
       }
     },
-    setScrollHeight(state, { payload }) {
+    setScrollHeight (state, { payload }) {
       return {
         ...state,
         scrollHeight: {

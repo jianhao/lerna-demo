@@ -2,13 +2,6 @@
  * 🚀 https://github.com/yannickcr/eslint-plugin-react
  */
 module.exports = {
-  // props 空格
-  'react/jsx-indent-props': [2, 2],
-  // props 参数换行
-  'react/jsx-max-props-per-line': [2, {
-    maximum: 1,
-    when: 'multiline'
-  }],
   // 自闭合标签对其位置
   'react/jsx-closing-bracket-location': [2, {
     'nonEmpty': 'tag-aligned',

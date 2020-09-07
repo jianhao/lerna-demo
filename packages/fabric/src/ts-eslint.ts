@@ -10,12 +10,8 @@ module.exports = {
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
-    'prettier',
-    // 'prettier/react',
-    'prettier/@typescript-eslint',
   ],
   plugins: [
-    'prettier',
     'eslint-comments',
     'jest',
     'unicorn',
@@ -30,7 +26,6 @@ module.exports = {
     jasmine: true,
   },
   rules: {
-    'prettier/prettier': 'error',
     ...importRules,
     ...unicornRules,
     ...esRules,

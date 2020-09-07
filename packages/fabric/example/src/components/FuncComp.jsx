@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function FuncComp() {
+function FuncComp () {
   const [number, setNumber] = useState(0)
 
   const retureRadeom = () => {

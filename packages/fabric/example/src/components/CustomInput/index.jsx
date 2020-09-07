@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import { connect } from 'umi'
 import { Input } from 'antd'
 
-function CustomInput({ value, onChange }, ref) {
+function CustomInput ({ value, onChange }, ref) {
   return (
     <div ref={ref}>
       <div>{value}</div>

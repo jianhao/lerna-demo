@@ -9,11 +9,8 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
-    'prettier',
-    // 'prettier/react',
   ],
   plugins: [
-    'prettier',
     'eslint-comments',
     'jest',
     'unicorn',
@@ -28,7 +25,6 @@ module.exports = {
     jasmine: true,
   },
   rules: {
-    'prettier/prettier': 'error',
     ...importRules,
     ...unicornRules,
     ...esRules,
