@@ -8,7 +8,7 @@ module.exports = {
   // 封号
   'semi': [2, 'never'],
   // 参数括号
-  'arrow-parens': [2, "as-needed", { "requireForBlockBody": true }],
+  'arrow-parens': [2, "as-needed"],
   // 方法名与参数的空格
   'space-before-function-paren': [2, "always"],
   // object 换行 https://eslint.org/docs/rules/object-curly-newline
