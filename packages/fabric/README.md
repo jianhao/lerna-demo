@@ -10,7 +10,7 @@ lint + lint + lint = fabric
 - [x] eslint 配置
 - [x] stylelint 配置
 - [x] prettier 配置 ❌ 根据团队投票，决定不再使用。所以也不再支持 prettier，配置仍然保留
-- [ ] 部分项目安装依赖冲突，导致下载了旧版本的 eslint-pulgin-xxx , 提供解决方案
+- [x] 部分项目安装依赖冲突，导致下载了旧版本的 eslint-pulgin-xxx , 见下方[解决方案](#问题及解决方案)
 
 ## 使用
 
@@ -121,10 +121,10 @@ yarn add husky lint-staged -D
     }
   },
   "lint-staged": {
-    "*.{.js,.ts,jsx,tsx}": [
+    "**/*.{js,ts,jsx,tsx}": [
       "eslint --fix --format=pretty"
     ],
-    "*.less": [
+    "**/*.less": [
       "stylelint --syntax less --fix"
     ]
   }
@@ -167,3 +167,19 @@ trim_trailing_whitespace = false
 ## ps
 
 机灵一点，所有的配置方式都不是固定的，根据项目灵活调整
+
+## 问题及解决方案
+
+### 项目安装依赖的实际版本不 fabric 的依赖不一致（过时）
+
+**使用 yarn 提供的 resolutions 解决**
+强制指定版本
+
+```json
+# package.json
+"resolutions": {
+  "eslint-config-airbnb": "18.2.0",
+  "eslint-config-airbnb-base": "14.2.0",
+  "eslint-plugin-react-hooks": "4.0.8"
+},
+```
