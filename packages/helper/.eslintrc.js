@@ -18,6 +18,7 @@ const eslintrc = {
     project: './tsconfig.eslint.json',
   },
   rules: {
+    'no-prototype-builtins': 0,
     'jest/expect-expect': 0, // 测试没断言
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules
     '@typescript-eslint/consistent-type-definitions': 0,
