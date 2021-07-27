@@ -9,3 +9,4 @@
  * @beta
  */
 export const add = (): number => 1 + 1
+

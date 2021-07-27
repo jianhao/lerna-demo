@@ -5,13 +5,6 @@
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.js",
-  "scripts": {
-    "build": "gulp build",
-    "api": "api-extractor run",
-    "test": "jest --coverage --verbose -u",
-    "lint": "eslint --ext .js,.ts ./src",
-    "lint:fix": "eslint --fix --ext .js,.ts ./src"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jianhao/helper.git"
@@ -25,6 +18,14 @@
     "url": "https://github.com/jianhao/helper/issues"
   },
   "homepage": "https://github.com/jianhao/helper#readme",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "gulp build",
+    "api": "api-extractor run",
+    "test": "jest --coverage --verbose -u",
+    "lint": "eslint --ext .js,.ts ./src",
+    "lint:fix": "eslint --fix --ext .js,.ts ./src"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
@@ -38,12 +39,13 @@
     "chalk": "^4.1.1",
     "conventional-changelog-cli": "^2.1.1",
     "eslint": "^7.30.0",
+    "eslint-formatter-pretty": "^4.1.0",
     "eslint-plugin-jest": "^24.3.6",
     "fs-extra": "^10.0.0",
     "gulp": "^4.0.2",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
-    "lint-staged": "^11.0.0",
+    "lint-staged": "^10.5.3",
     "rollup": "^2.52.8",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -58,11 +60,8 @@
     "lodash": "^4.17.21"
   },
   "lint-staged": {
-    "**/*.{js,jsx}": [
+    "*.{ts,js}": [
       "eslint --fix --format=pretty"
-    ],
-    "**/*.less": [
-      "stylelint --syntax less --fix"
     ]
   }
 }
