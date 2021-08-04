@@ -1,4 +1,4 @@
-# @mhc/fabric
+# myfabric
 
 lint 配置集合，方便快速配置项目的 lint 。
 
@@ -17,7 +17,7 @@ lint + lint + lint = fabric
 **下载**
 
 ```shell
-yarn add @mhc/fabric -D
+yarn add myfabric -D
 ```
 
 **在项目中使用**
@@ -39,7 +39,7 @@ js 项目的配置，适用于绝大部分项目
 
 ```javascript
 module.exports = {
-  extends: [require.resolve('@mhc/fabric/lib/eslint')],
+  extends: [require.resolve('myfabric/lib/eslint')],
   rules: {
     // custom rules
   },
@@ -50,7 +50,7 @@ ts 项目的配置，也兼容项目中 js、jsx 文件的校验，适用于所�
 
 ```javascript
 module.exports = {
-  extends: [require.resolve('@mhc/fabric/lib/ts-eslint')],
+  extends: [require.resolve('myfabric/lib/ts-eslint')],
   parserOptions: {
     project: './tsconfig.eslint.json',
   },
@@ -90,7 +90,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: [require.resolve('@mhc/fabric/lib/stylelint')],
+  extends: [require.resolve('myfabric/lib/stylelint')],
   rules: {
   },
 };
